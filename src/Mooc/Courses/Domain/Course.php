@@ -39,6 +39,8 @@ final class Course extends AggregateRoot
 
     public function rename(CourseName $newName): void
     {
+        $oldName = $this->name;
         $this->name = $newName;
+        $this->record(new CourseRenamedDomainEvent($this->id->value(), $oldName->value(), $newName->value()));
     }
 }
