@@ -96,3 +96,6 @@ services:
 
   # -- IMPLEMENTATIONS SELECTOR --
   CodelyTv\Shared\Domain\Bus\Event\EventBus: '@CodelyTv\Shared\Infrastructure\Bus\Event\WithMonitoring\WithPrometheusMonitoringEventBus'
+
+
+
